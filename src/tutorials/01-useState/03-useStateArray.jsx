@@ -1,26 +1,32 @@
 import { useState } from "react";
 import { data } from "../data";
 
-const useStateArray = () => {
-  const [people, setPeople] = useState(data);
+const UseStateArray = () => {
+  const [colleges, setPeople] = useState(data);
 
-  const removePerson = (id) => {
-    let newPeople = people.filter((person) => person.id !== id);
-    setPeople(newPeople);
+  const removeCollege = (rank) => {
+    let newCollege = colleges.filter((college) => college.rank !== rank);
+    setPeople(newCollege);
   };
+
   return (
     <div>
-      {people.map((eachItem) => {
-        const { id, name } = eachItem;
+      {colleges.map((eachItem) => {
+        const { rank, name } = eachItem;
         return (
-          <div key={id}>
+          <div key={rank}>
             <h3>{name}</h3>
-            <button onClick={() => removePerson(id)}>Remove</button>
+            <h4 style={{ color: "red", fontSize: "1.5rem" }}>#{rank}</h4>
+            <button onClick={() => removeCollege(rank)}>Remove</button>
           </div>
         );
       })}
       <div>
-        <button className="btn" onClick={() => setPeople([])}>
+        <button
+          style={{ marginTop: "2rem" }}
+          className="btn"
+          onClick={() => setPeople([])}
+        >
           Clear Items
         </button>
       </div>
@@ -28,4 +34,4 @@ const useStateArray = () => {
   );
 };
 
-export default useStateArray;
+export default UseStateArray;

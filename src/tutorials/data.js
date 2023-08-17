@@ -1,6 +1,7 @@
 export const data = [
-  { id: 1, name: "john" },
-  { id: 2, name: "peter" },
-  { id: 3, name: "susan" },
-  { id: 4, name: "anna" },
+  { rank: 1, name: "MIT" },
+  { rank: 2, name: "Harvard" },
+  { rank: 3, name: "CMU" },
+  { rank: 4, name: "Stanford" },
+  { rank: 5, name: "Cornell" },
 ];
