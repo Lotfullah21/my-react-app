@@ -1,9 +1,9 @@
-import DataItems from "./tutorials/01-useState/03-useStateArray";
+import UseObjectState from "./tutorials/01-useState/05-useStateObject";
 
 function App() {
   return (
     <>
-      <DataItems></DataItems>
+      <UseObjectState></UseObjectState>
     </>
   );
 }

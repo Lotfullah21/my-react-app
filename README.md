@@ -41,3 +41,10 @@ The filter() method takes a callback function as its argument.
 The callback function is executed for each element in the array.
 If the callback function returns true for a given element, that element is included in the filtered array. If it returns false, the element is excluded.
 The filtered elements are collected into a new array.
+
+### Batching
+
+when we are using multiple states and update their values at the same, if we re-render every time we change the state, their would multiple of that rendering which is un-efficient.
+we use the concept of batching where we group multiple state update and render it once.
+
+<!-- three specific thoughts -->
